@@ -1,0 +1,11 @@
+Include/
+Lib/
+Scripts/
+.pytest_cache/
+__pycache__/
+.idea/
+.deepeval/
+# Ignore Python cache files
+*.pyc
+*.pyo
+*.pyd   

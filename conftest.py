@@ -29,11 +29,11 @@ def initialize_browser(playwright: Playwright,request):
     # Initialize the browser with the specified type
     browser_name = request.config.getoption("--browser_type")
     if browser_name == "chromium":
-        browser = playwright.chromium.launch(headless=False)    
+        browser = playwright.chromium.launch(headless=True)
     elif browser_name == "firefox":
-        browser = playwright.firefox.launch(headless=False) 
+        browser = playwright.firefox.launch(headless=True)
     elif browser_name == "webkit":
-        browser = playwright.webkit.launch(headless=False)
+        browser = playwright.webkit.launch(headless=True)
   
     page = browser.new_page()  # Create a new page
     yield page
